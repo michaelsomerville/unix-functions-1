@@ -1,0 +1,19 @@
+
+// 3600 = 1 hour - 60 * 60 
+
+$time = date('Y-m-d H:i:s');
+
+echo $time;
+echo "<br><br>";
+
+echo $difference_in_seconds = strtotime($time) - strtotime('2017-07-19 00:02:16');
+echo "<br><br>";
+
+$test = $difference_in_seconds / 60;
+
+echo $test;
+
+echo "<br><br>";
+
+if($difference_in_seconds > '900')
+	echo 'prefect';
