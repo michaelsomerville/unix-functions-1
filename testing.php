@@ -12,3 +12,22 @@ function relativeDate($date) {
 
 	return $timestamp;
 }
+
+
+
+
+timestamp -3600 means:
+
+In your local time zone: Wednesday 31st December 1969 06:00:00 PM
+UTC: Wednesday 31st December 1969 11:00:00 PM
+» customize time zone and format
+We have some code-examples for you:
+
+PHP	date('d.m.Y H:i:s', -3600);
+MySQL	select from_unixtime(-3600);
+Java	new SimpleDateFormat("MM/dd/yyyy HH:mm:ss").format(new Date(-3600 * 1000L))
+C++	time_t epch = -3600;
+printf("%i -> %s", epch, asctime(gmtime(&epch))); (time.h)
+C#	String.Format("{0:d/M/yyyy HH:mm:ss}", new System.DateTime(1970, 1, 1, 0, 0, 0, 0)
+.AddSeconds(1293840000));
+JavaScript	new Date(-3600*1000).toString()
